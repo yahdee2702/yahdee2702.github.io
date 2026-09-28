@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dasar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav > ul {
+            display: flex;
+            flex-direction: row;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav > ul > li {
+            display: block;
+        }
+
+        nav > ul > li a {
+            display: block;
+            padding: 16px 32px;
+
+            color: #515151 !important;
+            background-color: #F1F1F1;
+            border-bottom: 4px #F1F1F1 solid;
+            
+            text-decoration: none;
+            text-align: center;
+            text-transform: uppercase;
+
+            font-size: large;
+            font-weight: 500;
+        }
+
+        nav > ul > li a:hover {
+            color: white !important;
+            background-color: #515151;
+            border-bottom-color: #44B5B5;
+        }
+
+        nav > ul > li a.active {
+            color: white !important;
+            background-color: #44B5B5;
+            border-bottom-color: #F1F1F1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
