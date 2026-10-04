@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <aside aria-label="Sidebar" id="sidebar">
+    <aside aria-label="Sidebar" id="sidebar-wrapper">
         <header>
             <a href="/" id="avatar">
                 <img src="assets/sideprofile.webp" alt="Avatar">
@@ -55,9 +55,25 @@
     <div id="main-wrapper">
         <div id="body-wrapper">
             <header id="topbar-wrapper">
+                <div id="mobile-accessibility">
+                    <button>
+                        <i class="fas fa-bars fa-fw"></i>
+                    </button>
+
+                    <h1>Yahdi's Blog</h1>
+
+                    <button>
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
                 <nav id="breadcrumb">
                     <span>Home</span>
                 </nav>
+
+                <search>
+                    <i class="fas fa-search fa-fw"></i>
+                    <input type="text" placeholder="Search...">
+                </search>
             </header>
             <div id="content-wrapper">
                 <main aria-label="Main Content">
@@ -96,9 +112,43 @@
                     </article>
                 </main>
                 <aside id="panel-wrapper" aria-label="Panel">
-
+                    <div id="panel-access">
+                        <section class="panel-section">
+                            <h2 class="panel-heading">Recently Updated</h2>
+                            <ul class="panel-list">
+                                <li class="panel-list-item">
+                                    <a class="hyperlink" href="#">PAW #2</a>
+                                </li>
+                                <li class="panel-list-item">
+                                    <a class="hyperlink" href="#">Title</a>
+                                </li>
+                            </ul>
+                        </section>
+                        <section class="panel-section">
+                            <h2 class="panel-heading">Trending Tags</h2>
+                            <ul class="panel-grid">
+                                <li class="panel-grid-item">
+                                    <a class="badge" href="#">Category 1</a>
+                                </li>
+                                <li class="panel-grid-item">
+                                    <a class="badge" href="#">Category 2</a>
+                                </li>
+                                <li class="panel-grid-item">
+                                    <a class="badge" href="#">Category 3</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </aside>
             </div>
+            <footer id="footer-wrapper">
+                <p class="footer-text">
+                    Made by <a class="hyperlink" href="/">M. Yahdi Ilhamfahmi</a>
+                </p>
+                <p class="footer-text">
+                    Inspired by <a class="hyperlink" href="https://nurihsanag.id/">Iyxan23</a>
+                </p>
+            </footer>
         </div>
     </div>
 </body>
