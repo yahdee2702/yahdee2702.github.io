@@ -219,6 +219,8 @@ body {
   font-size: 12px;
   font-weight: bold;
 
+  line-height: 1.2;
+
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
