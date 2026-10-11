@@ -35,3 +35,5 @@ expanded_view.addEventListener("click", () => {
 });
 
 setupExpandable();
+
+console.log("Hello")
