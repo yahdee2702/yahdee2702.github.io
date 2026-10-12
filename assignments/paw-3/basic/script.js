@@ -11,7 +11,8 @@ let rotation = 0;
 let animationId = 0;
 
 const STOP_ANGLE = 115;
-const DIGIT_OFFSET = 5;
+const DIGIT_OFFSET = 20;
+const STOP_OFFSET = 5;
 const DIGIT_ANGLES = {
   1: 55,
   2: 22,
@@ -166,7 +167,7 @@ function animateHome() {
 function getDragged() {
   if (!drag) return 0;
 
-  const maxTravel = drag.startDigitAngle + DIGIT_OFFSET;
+  const maxTravel = drag.startDigitAngle + STOP_OFFSET;
   const travel = Math.min(drag.travelled, maxTravel);
   const dragged = drag.startRotation + travel;
 
@@ -227,6 +228,13 @@ holes.forEach((hole) => {
 
     let selectedDigit = 0;
     const dragged = getDragged();
+
+    if (dragged <= 57) {
+      hole.classList.remove("dragging");
+      drag = null;
+      animateHome();
+      return;
+    }
 
     for (const digit of DIGIT_ORDER) {
       const angle = DIGIT_ANGLES[digit];
