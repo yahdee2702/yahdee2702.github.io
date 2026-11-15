@@ -1,0 +1,136 @@
+/* Penyesuaian tema gelap di atas Bootstrap */
+:root {
+    --sidebar-width: 18.75rem;
+}
+
+[data-bs-theme="dark"] {
+    --bs-body-bg: #1b1b1e;
+    --bs-body-bg-rgb: 27, 27, 30;
+    --bs-body-color: #afb0b1;
+    --bs-secondary-color: #868686;
+    --bs-tertiary-bg: #1e1e1e;
+    --bs-tertiary-bg-rgb: 30, 30, 30;
+    --bs-border-color: #292929;
+    --bs-card-bg: #1e1e1e;
+    --bs-link-color-rgb: 175, 176, 177;
+    --bs-link-hover-color-rgb: 210, 96, 58;
+}
+
+body {
+    font-family: "Source Sans 3", sans-serif;
+}
+
+.fw-black {
+    font-weight: 900;
+}
+
+/* Sidebar */
+.sidebar {
+    --bs-offcanvas-width: var(--sidebar-width);
+    --bs-offcanvas-bg: var(--bs-tertiary-bg);
+}
+
+.sidebar-header {
+    padding: 3.5rem 1.25rem 2.5rem 2.5rem;
+}
+
+.sidebar .avatar {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+}
+
+.sidebar .site-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.sidebar .nav-pills {
+    --bs-nav-pills-link-active-bg: #262626;
+    --bs-nav-pills-link-active-color: #afb0b1;
+    --bs-nav-pills-border-radius: 0.75rem;
+    --bs-nav-link-color: #868686;
+    --bs-nav-link-hover-color: #afb0b1;
+}
+
+.sidebar .nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #262626;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--sidebar-width);
+    }
+
+    .main-wrapper {
+        margin-left: var(--sidebar-width);
+    }
+}
+
+/* Topbar */
+.topbar {
+    height: 3rem;
+}
+
+.search-box {
+    width: 14rem;
+    border: 1px solid var(--bs-border-color);
+}
+
+.search-box:focus-within {
+    border-color: rgb(255 255 255 / 95%);
+}
+
+/* Artikel */
+.article-card {
+    border-color: var(--bs-border-color);
+    box-shadow: rgb(21 21 21 / 72%) 0 6px 18px 0, rgb(137 135 135 / 24%) 0 0 0 1px !important;
+    transition: background-color 0.35s ease-in-out;
+}
+
+.article-card:hover {
+    background-color: #2a2e31;
+}
+
+.article-image {
+    aspect-ratio: 40 / 21;
+    min-height: 100%;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Tag */
+.tag {
+    color: var(--bs-secondary-color);
+    background-color: var(--bs-body-bg);
+    border: 1px solid var(--bs-border-color);
+    font-weight: 400;
+    font-size: 0.85rem;
+    text-decoration: none;
+    padding: 0.4rem 0.7rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.tag:hover {
+    background-color: #d2603a;
+    color: #fff;
+    border-color: transparent;
+}
